@@ -1,25 +1,23 @@
 import './App.css';
-import { Add } from './pages/Add/add';
-import { Company } from './pages/Company/company';
-import { Email } from './pages/Email/email';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
+
+
+import Form from '../src/pages/Form'
 import { Home } from './pages/Home/home';
-import { Team } from './pages/Team/team';
-import { Calendar } from './pages/Calendar/calendar';
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1 style={{ fontFamily: 'cursive', color: '#C71C1C' }}> DASHBORDS-PAGES</h1>
-      <Home />
-      <Company />
-      <Add />
-      <Team />
-      <Email />
-      <Calendar />
+    <Router>
+      <div className="App">
 
-    </div>
+      </div >
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/form" exact element={<Form />} />
+      </Routes>
+
+    </Router>
   );
 }
-
-export default App;

@@ -1,4 +1,22 @@
-.container-home{
+@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
+
+.container-home {
     display: flex;
-    background-color: brown;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+h1 {
+    font-family: 'Dekko', cursive;
 }
