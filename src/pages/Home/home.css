@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
 
 .container-home {
     display: flex;
@@ -9,14 +9,14 @@
 
 .container-nav {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin-top: 20px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
 h1 {
-    font-family: 'Dekko', cursive;
+    font-family: 'Milonga', cursive;
+    color: #f520a3;
 }

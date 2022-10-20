@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
+
+.button {
+    display: flex;
+}
+
+.button-create {
+    width: 150px;
+    padding: 18px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Milonga', cursive;
+    color: #ffff;
+    background-color: #f520a3;
+    border-width: 1px;
+    border: none;
+    border-radius: 50px;
+
+}

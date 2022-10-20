@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import './buttoncreate.css'
 
 const ButtonCreate = () => {
     return (
-        <div>
-            <nav>
-                <Link to='/form'>Inserir </Link>
-            </nav>
+        <div className='button'>
+            <a href="/form" >
+                <button className='button-create'>Inserir item </button>
+            </a>
         </div>
     )
 }
 
-export default ButtonCreate
+export default ButtonCreate;

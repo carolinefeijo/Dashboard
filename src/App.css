@@ -1,9 +1,10 @@
-* {
+*  {
   margin: 0;
   padding: 0;
+  background-color: #d8c8d2;
 }
 
 .App {
+  display: flex;
   text-align: center;
-  background-color: #88ADC9;
 }
