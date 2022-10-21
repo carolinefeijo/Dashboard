@@ -1,0 +1,55 @@
+.container-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+form {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 80px;
+    flex-direction: column;
+    padding: auto;
+
+}
+
+input,
+select,
+textarea {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border-color: #000000;
+    border-width: 1px;
+    width: 900px;
+}
+
+.div-container-input {
+    padding: 10px;
+
+}
+
+.label-text {
+    font-size: 25px;
+    color: #f520a3;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.label-text-secundar {
+    font-size: 15px;
+}
+
+.custom-input-button {
+    margin-left: 10px;
+    border-radius: 8px;
+    align-items: center;
+    justify-self: center;
+    background-color: #f520a3;
+    border: none;
+    color: #ffff;
+}

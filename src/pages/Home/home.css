@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
-
 .container-home {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container-nav-main {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .container-nav {
     display: flex;
-    width: 90%;
+    width: 95%;
     margin-top: 20px;
     flex-direction: row;
     align-items: center;
@@ -17,6 +21,10 @@
 }
 
 h1 {
-    font-family: 'Milonga', cursive;
     color: #f520a3;
+}
+
+.container-main {
+    align-items: center;
+   
 }

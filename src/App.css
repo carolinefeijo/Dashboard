@@ -1,10 +1,10 @@
-*  {
-  margin: 0;
-  padding: 0;
-  background-color: #d8c8d2;
+@import url('https://fonts.googleapis.com/css2?family=Milonga&family=Quicksand:wght@500&display=swap');
+
+* {
+  background-color: #fcecf5;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .App {
-  display: flex;
   text-align: center;
 }
