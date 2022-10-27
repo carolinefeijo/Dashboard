@@ -1,45 +1,52 @@
-import React, { useState } from 'react'
-import './style.css'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { fetchUpdateProduct, fetchEditProduct } from '../../services/users';
 
-import { fetchNewProduct } from '../../services/users'
+const EditProduct = () => {
+  const { id } = useParams();
 
+  // const [image, setImage] = useState("");
+  const [product, setProduct] = useState("");
+  const [description, setDescription] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [value, setValue] = useState("");
 
-const Form = () => {
-
-  const [image, setImage] = useState("")
-  const [product, setProduct] = useState("")
-  const [description, setDescription] = useState("")
-  const [quantity, setQuantity] = useState("")
-  const [value, setValue] = useState("")
-
-
-
-  const createNewProduct = async () => { // criar novo produto
-    const data = await fetchNewProduct(image, product, description, quantity, value);
-    if (data.message === "produto criado com sucesso") {
-      window.location.href = 'http://localhost:3000/';
-    } else {
-      console.log("naõ deu")
-    }
+  const GetEditProduct = async () => {
+    const data = await fetchEditProduct(id)
+    // setImage(data.image)
+    setProduct(data.product)
+    setDescription(data.description)
+    setQuantity(data.quantity)
+    setValue(data.value)
   }
 
-  const validInput = (e) => { // validar informação do formulario
-    e.preventDefault();
-    if (image && product && description && quantity && value !== "") {
-      return createNewProduct()
-    } else {
-      return alert("PREENCHA O CAMPO")
+
+  const uptadeProduct = async () => {
+    const product = {
+      // image,
+      product,
+      description,
+      quantity,
+      value
     }
+    const data = await fetchUpdateProduct(product,id)
+
   }
+
+  useEffect(() => {
+    GetEditProduct()
+  }, [])
+
 
   return (
-    <div className='container-form'>
-      <h1>Inserir produto</h1>
-      <form onSubmit={validInput}>
+    <div>
+      <form >
 
         <div className='div-container-input'>
+          <h1>EDITAR produto</h1>
+          <p> ID : {id}  </p>
           <label className='label-text' htmlFor='img'> Foto</label>
-          <input className='style-input-img' type="file" accept='file' name='image' onChange={(e) => setImage(e.target.value)} value={image} />
+          {/* <input className='style-input-img' type="file" accept='file' name='image' onChange={(e) => setImage(e.target.value)} value={image} /> */}
         </div>
 
 
@@ -63,12 +70,13 @@ const Form = () => {
           <input className='style-input-description' type="text" name='description' placeholder='Digite a descrição' onChange={(e) => setDescription(e.target.value)} value={description} />
         </div>
 
-        <input className='custom-input-button' type="submit" value="Enviar" />
+
+        <input className='custom-input-button' type="submit" value="Enviar" onClick={uptadeProduct} />
 
       </form>
-    </div>
 
+    </div>
   )
 }
 
-export default Form;
+export default EditProduct

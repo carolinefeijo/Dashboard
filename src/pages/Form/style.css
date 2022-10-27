@@ -1,3 +1,5 @@
+
+
 .container-form {
     display: flex;
     align-items: center;
@@ -10,7 +12,7 @@ form {
     width: 900px;
     margin: 0 auto;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 20px;
     flex-direction: column;
     padding: auto;
 
@@ -31,25 +33,38 @@ textarea {
 .div-container-input {
     padding: 10px;
 
+
 }
 
 .label-text {
     font-size: 25px;
-    color: #f520a3;
+    color: #db41a0;
     font-style: normal;
     font-weight: bold;
 }
 
-.label-text-secundar {
+.style-input {
     font-size: 15px;
+
 }
 
 .custom-input-button {
     margin-left: 10px;
+    width: 102%;
     border-radius: 8px;
     align-items: center;
     justify-self: center;
-    background-color: #f520a3;
+    background-color: #db41a0;
     border: none;
     color: #ffff;
+}
+
+.style-input-img {
+    display: flex;
+    background-color: #db41a0;
+
+}
+
+.style-input-description {
+    height: 90px;
 }
